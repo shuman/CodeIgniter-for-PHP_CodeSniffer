@@ -22,9 +22,33 @@ Based on PHP_CodeSniffer **CodeIgniter-for-PHP_CodeSniffer** helps to validate m
 
 ## Installation
 
+### With composer
+
+Add this to your composer.json
+
+```json
+{
+ "require-dev": {
+   ...
+   "nerones/codeigniter-phpcs": "dev-master"
+   ...
+ },
+}
+```
+
+then run `composer install` and after that, you can use this set of rules like:
+
+```bash
+vendor/bin/phpcs --standard=vendor/nerones/codeigniter-phpcs/CodeIgniter/ --extensions=php src/
+```
+
+The paths used needs to be changed if you install the ruleset globaly.
+
+### With ant
+
 There is an [Apache Ant](http://ant.apache.org/) script at the root of the repository. It targets standard Linux environment like Ubuntu with PHP_CodeSniffer 1.3.0 or above installed via PEAR. It requires PHP (in its 5th version).
 
-Just go to the root of the project and type `ant` to set up **CodeIgniter-for-PHP_CodeSniffer**. 
+Just go to the root of the project and type `ant` to set up **CodeIgniter-for-PHP_CodeSniffer**.
 If you have CodeSniffer installed in another directory than "/usr/share/php/PHP/CodeSniffer/" than you can pass the right directory
 as argument to ant. Just type `ant -Dphpcs.dir="/path/to/CodeSniffer/"`.
 
