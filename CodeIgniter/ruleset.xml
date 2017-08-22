@@ -7,6 +7,18 @@
   <rule ref="CodeIgniter.NamingConventions.ValidMethodName">
     <severity>1</severity>
   </rule>
+  <rule ref="CodeIgniter.Commenting.InlineComment.WrongStyle">
+    <type>warning</type>
+  </rule>
+  <rule ref="CodeIgniter.Commenting.InlineComment.LongCommentWithoutSpacing">
+    <type>warning</type>
+  </rule>
+  <rule ref="CodeIgniter.Strings.DoubleQuoteUsage">
+    <type>warning</type>
+  </rule>
+  <rule ref="CodeIgniter.Files.ClosingLocationComment">
+    <type>warning</type>
+  </rule>
   <rule ref="CodeIgniter.Files.ClosingLocationComment">
     <properties>
       <!-- End of the path pointing to your project's application root or all of it. -->
@@ -26,8 +38,6 @@
 
   <!-- Constants should always be fully uppercase -->
   <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
-  <!-- TRUE, FALSE, and NULL keywords should always be fully uppercase -->
-  <rule ref="Generic.PHP.UpperCaseConstant"/>
 
   <!-- One statement per line -->
   <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
@@ -37,11 +47,11 @@
   <rule ref="PEAR.Commenting.FunctionComment"/>
   <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
   <!-- Use warnings for docblock comments for files and variables, since nothing is cleary explained -->
-  <rule ref="PEAR.Commenting.FileComment">
-    <properties>
-      <property name="error" value="false"/>
-    </properties>
-  </rule>
+  <!--<rule ref="PEAR.Commenting.FileComment">-->
+    <!--<properties>-->
+      <!--<property name="error" value="false"/>-->
+    <!--</properties>-->
+  <!--</rule>-->
   <rule ref="Squiz.Commenting.VariableComment">
     <properties>
       <property name="error" value="false"/>
