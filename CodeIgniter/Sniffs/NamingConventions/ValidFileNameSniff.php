@@ -55,7 +55,7 @@ class CodeIgniter_Sniffs_NamingConventions_ValidFileNameSniff implements PHP_Cod
         // computes the expected filename based on the name of the class or interface that it contains.
         $decNamePtr = $phpcsFile->findNext(T_STRING, $stackPtr);
         $decName = $tokens[$decNamePtr]['content'];
-        $expectedFileName = strtolower($decName);
+        $expectedFileName = ucfirst($decName);
         // extracts filename without extension from its path.
         $fullPath = $phpcsFile->getFilename();
         $fileNameAndExt = basename($fullPath);
@@ -66,7 +66,7 @@ class CodeIgniter_Sniffs_NamingConventions_ValidFileNameSniff implements PHP_Cod
             $errorMessage = sprintf(
                 $errorTemplate,
                 $fileName,
-                strtolower($tokens[$stackPtr]['content']), // class or interface
+                ucfirst($tokens[$stackPtr]['content']), // class or interface
                 $decName,
                 $expectedFileName
             );
